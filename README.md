@@ -1,32 +1,33 @@
 # Lumen — Estudio creativo
 
-Agenda moderna y control de pagos para estudios de fotografía, sesiones familiares, bebés y eventos.
+Agenda y control de pagos para estudios de fotografía, sesiones familiares, bebés y eventos.
 
-## Características
-- Panel de reservas, ingresos recibidos y saldos pendientes.
-- Agenda de sesiones con cliente, tipo, fecha, hora, lugar, precio y anticipo.
-- Búsqueda y filtros.
-- Diseño adaptable para teléfono, tablet y computadora.
-- Preparada como PWA instalable desde el navegador.
-- La demo guarda datos localmente en el navegador (localStorage); no hay servidor en esta fase.
+## Funciones
+- Reservas con cliente, tipo de sesión, fecha, hora, lugar, precio y anticipo.
+- Registro de pagos adicionales y saldos pendientes.
+- Inicio de sesión y creación de cuenta con Supabase Auth.
+- Sincronización de reservas entre la web y la app Android usando la misma cuenta.
+- Políticas RLS: cada cuenta solo puede consultar y modificar sus propias reservas.
+- Interfaz adaptable a teléfono, tablet y computadora; instalable como PWA.
 
-## Ejecutar
+## Supabase
+El proyecto `Lumen-Estudio` usa su propia base de datos y está separado de CEMSTAN. El cliente usa únicamente la URL del proyecto y una clave publishable; nunca se incluye la clave `service_role`. Las tablas quedan protegidas por Row Level Security.
+
+En Supabase, configura **Authentication → URL Configuration** para que `Site URL` sea `https://damoc1519-lang.github.io/Lumen-Estudio/` y agrega esa misma dirección a **Redirect URLs**. Para desarrollo local agrega `http://localhost:5173/**`. Esto permite que la confirmación por correo regrese a la aplicación.
+
+## Desarrollo
 Requiere Node.js 20.19+ o 22.12+.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Compilar para producción
+## Comprobaciones y compilación
+
 ```bash
+npm run typecheck
 npm run build
-npm run preview
 ```
-El directorio dist puede desplegarse en hosting estático. Los datos de localStorage no se comparten entre dispositivos. Para operación real multiusuario habrá que conectar almacenamiento compartido y autenticación, revisando los límites de sus planes gratuitos.
 
-## Versión Android
-
-El proyecto incluye una app Android ligera que abre la versión web publicada, para compartir la misma interfaz. GitHub Actions genera un APK de prueba automáticamente cuando se actualiza `android/**`. Descárgalo desde la ejecución **Build Android APK → Artifacts → lumen-android-apk**.
-
-La APK y la web aún no comparten reservas porque el prototipo usa almacenamiento local. Para sincronización real se necesita conectar una base remota. La organización Supabase vinculada ya alcanzó su límite de dos proyectos gratuitos activos; no se modificaron ni pausaron los proyectos existentes. Se elegirá un backend gratuito independiente antes de guardar información real.
+GitHub Actions publica la web en GitHub Pages. Android abre la misma web; al iniciar sesión con la misma cuenta, ambos clientes consultan el mismo proyecto Supabase. El workflow `Build Android APK` genera el APK desde `android/**`.

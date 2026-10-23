@@ -2,16 +2,15 @@
 -- Future signups are not enrolled automatically.
 create table if not exists public.workspaces (
   id uuid primary key default gen_random_uuid(),
-  name text not null,
+  name text not null unique,
   created_at timestamptz not null default now()
 );
 create table if not exists public.workspace_members (
   workspace_id uuid not null references public.workspaces(id) on delete cascade,
   user_id uuid not null references auth.users(id) on delete cascade,
-  role text not null default 'member',
+  role text not null default 'member' check (role in ('owner','member')),
   created_at timestamptz not null default now(),
-  primary key (workspace_id, user_id),
-  unique (user_id)
+  primary key (workspace_id, user_id)
 );
 insert into public.workspaces(name)
 select 'Playart'

@@ -1,4 +1,4 @@
-# Lumen — Estudio creativo
+# Playart — Fotografía y video
 
 Agenda y control de pagos para estudios de fotografía, sesiones familiares, bebés y eventos.
 
@@ -11,7 +11,7 @@ Agenda y control de pagos para estudios de fotografía, sesiones familiares, beb
 - Interfaz adaptable a teléfono, tablet y computadora; instalable como PWA.
 
 ## Supabase
-El proyecto `Lumen-Estudio` usa su propia base de datos y está separado de CEMSTAN. El cliente usa únicamente la URL del proyecto y una clave publishable; nunca se incluye la clave `service_role`. Las tablas quedan protegidas por Row Level Security.
+El proyecto Supabase que actualmente se llama `Lumen-Estudio` usa su propia base de datos y está separado de CEMSTAN. El cliente usa únicamente la URL del proyecto y una clave publishable; nunca se incluye la clave `service_role`. Las tablas quedan protegidas por Row Level Security.
 
 En Supabase, configura **Authentication → URL Configuration** para que `Site URL` sea `https://damoc1519-lang.github.io/Lumen-Estudio/` y agrega esa misma dirección a **Redirect URLs**. Para desarrollo local agrega `http://localhost:5173/**`. Esto permite que la confirmación por correo regrese a la aplicación.
 

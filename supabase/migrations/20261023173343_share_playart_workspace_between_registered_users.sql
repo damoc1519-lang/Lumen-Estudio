@@ -37,14 +37,14 @@ from (
 cross join lateral (
   select id from public.workspaces where name = 'Playart' order by created_at limit 1
 ) w
-on conflict (user_id) do nothing;
+on conflict (workspace_id, user_id) do nothing;
 
 create or replace function public.current_workspace_id()
 returns uuid
-language sql stable security invoker set search_path = public
+language sql stable security invoker set search_path = ''
 as $$
-  select workspace_id from public.workspace_members
-  where user_id = (select auth.uid()) limit 1
+  select wm.workspace_id from public.workspace_members wm
+  where wm.user_id = (select auth.uid()) order by wm.created_at limit 1
 $$;
 revoke all on function public.current_workspace_id() from public;
 grant execute on function public.current_workspace_id() to authenticated;

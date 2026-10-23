@@ -24,3 +24,9 @@ npm run build
 npm run preview
 ```
 El directorio dist puede desplegarse en hosting estático. Los datos de localStorage no se comparten entre dispositivos. Para operación real multiusuario habrá que conectar almacenamiento compartido y autenticación, revisando los límites de sus planes gratuitos.
+
+## Versión Android
+
+El proyecto incluye una app Android ligera que abre la versión web publicada, para compartir la misma interfaz. GitHub Actions genera un APK de prueba automáticamente cuando se actualiza `android/**`. Descárgalo desde la ejecución **Build Android APK → Artifacts → lumen-android-apk**.
+
+La APK y la web aún no comparten reservas porque el prototipo usa almacenamiento local. Para sincronización real se necesita conectar una base remota. La organización Supabase vinculada ya alcanzó su límite de dos proyectos gratuitos activos; no se modificaron ni pausaron los proyectos existentes. Se elegirá un backend gratuito independiente antes de guardar información real.

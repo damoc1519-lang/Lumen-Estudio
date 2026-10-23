@@ -1,1 +1,11 @@
-{"name":"Lumen — Estudio creativo","short_name":"Lumen","description":"Agenda y control de pagos para estudios de fotografía.","start_url":"./","scope":"./","display":"standalone","background_color":"#f8f7f4","theme_color":"#f7f4ef","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "Playart — Fotografía y video",
+  "short_name": "Playart",
+  "description": "Agenda sesiones fotográficas, eventos y pagos.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f7f4",
+  "theme_color": "#f7f4ef",
+  "icons": [{"src":"playart-logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

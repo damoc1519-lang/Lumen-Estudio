@@ -34,3 +34,48 @@
 /* Mobile-first event equipment checklist */
 .inventory-mobile-switch{display:none}.inventory-tabs button svg,.inventory-event-list .icon-btn svg,.inventory-mobile-switch svg{color:#68866b}.inventory-stats .pending-card>svg:first-child{color:#66866b}.gear-row .pending-row-icon{background:#edf3eb;color:#66866b}.check-item{min-height:62px;background:#fff;border:1px solid #efeee9;border-radius:11px;margin:7px 0;padding:11px 12px;gap:12px}.check-item input{appearance:none;-webkit-appearance:none;width:25px;height:25px;margin:0;border:2px solid #bdc9b9;border-radius:8px;background:#fff;display:grid;place-items:center;cursor:pointer;flex:0 0 25px}.check-item input:checked{background:#5b805f;border-color:#5b805f}.check-item input:checked:after{content:'✓';font-size:17px;line-height:1;color:white;font-weight:800}.check-item input:disabled{opacity:.8}.check-item-name{font-size:13px;font-weight:600;color:#3d493f}.check-item small{font-size:10px;font-weight:700;background:#eff3ec;color:#5e785f;border-radius:20px;padding:6px 9px}.check-tick{display:none}.check-progress>div{font-size:11px}.check-progress b{font-size:13px}.check-progress i{height:7px}.inventory-mobile-switch select{display:block;width:100%;margin-top:7px;padding:11px;border:1px solid #e4e8e0;border-radius:10px;background:#f8faf6;color:#425545;font-weight:600;font-size:12px}.inventory-event-list .icon-btn{color:#638168;background:#f3f6f1;border-color:#e7ece3}
 @media(max-width:760px){.inventory-event-list{display:none}.inventory-mobile-switch{display:block;margin:13px 0 5px;font-size:10px;font-weight:700;color:#798278}.inventory-layout{display:block}.checklist-detail{padding:18px 15px 20px}.checklist-detail>.panel-heading h2{font-size:18px}.checklist-detail .check-progress{margin:16px 0 19px}.check-category{margin:14px 0 18px}.check-category-title{font-size:9px;margin-bottom:8px}.check-item{min-height:64px;padding:12px;box-shadow:0 2px 7px #29382b08}.checklist-footer{position:sticky;bottom:calc(72px + env(safe-area-inset-bottom));background:#fff;padding:13px 0 2px;margin-top:18px;box-shadow:0 -8px 15px #fff}.checklist-footer .primary-btn,.checklist-footer .secondary-btn{min-height:46px;font-size:12px}.inventory-stats{display:none}.inventory-welcome .subtitle{max-width:100%;font-size:12px}.inventory-tabs{margin-bottom:12px}.inventory-tabs button{min-height:43px;font-size:11px}.inventory-panel .panel-heading h2{font-size:17px}.inventory-hint{font-size:11px}.gear-row{min-height:66px}.gear-row .booking-main b{font-size:12px}.gear-quantity{font-size:10px}}
+
+/* Mobile readability: preserve the desktop visual scale while making the APK easier to read. */
+@media(max-width:760px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{font-size:16px}
+  .page-content{padding:24px 18px 28px}
+  .welcome-row h1,.subpage h1{font-size:32px;line-height:1.2}
+  .subtitle{font-size:14px;line-height:1.55}
+  .eyebrow,.section-kicker{font-size:11px}
+  .panel-heading h2,.inventory-panel .panel-heading h2{font-size:18px}
+  .panel{padding:17px}
+  .stat-top{font-size:12px}
+  .stat-number{font-size:27px}
+  .stat-foot{font-size:11px}
+  .booking-main b{font-size:13px}
+  .booking-main span,.booking-time{font-size:11px}
+  .booking-date b{font-size:15px}
+  .booking-date span{font-size:10px}
+  .status{font-size:10px}
+  .primary-btn,.secondary-btn,.text-btn,.period-btn{font-size:13px;min-height:42px}
+  .search-box input,.form-field input,.form-field select,.form-field textarea{font-size:16px}
+  .mobile-tabs button{font-size:10px;min-height:58px}
+  .mobile-tabs button svg{width:19px;height:19px}
+  .pending-card b{font-size:13px}
+  .pending-card small,.pending-date{font-size:11px}
+  .pending-row{min-height:66px}
+  .pending-amount{font-size:13px}
+  .team-help,.team-note,.team-count span,.team-limit{font-size:12px}
+  .invite-form label{font-size:12px}
+  .invite-form input{font-size:16px;min-height:46px}
+  .inventory-mobile-switch{font-size:12px}
+  .inventory-hint{font-size:13px;line-height:1.55}
+  .checklist-card b{font-size:13px}
+  .checklist-card span{font-size:11px}
+  .check-category-title{font-size:11px}
+  .check-item-name{font-size:15px}
+  .check-item small{font-size:11px}
+  .check-progress>div{font-size:13px}
+  .check-progress b{font-size:15px}
+  .deliverable-row .pending-date{font-size:11px}
+  .money-note{font-size:12px}
+}
+@media(max-width:400px){
+  .mobile-tabs button{font-size:9px}
+}

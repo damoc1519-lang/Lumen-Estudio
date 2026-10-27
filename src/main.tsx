@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { CalendarDays, Camera, ChartNoAxesCombined, CircleDollarSign, Clock3, Image, LayoutDashboard, ListChecks, Menu, Plus, Search, Settings2, Users, X, ArrowUpRight, ChevronLeft, ChevronRight, Check, Banknote, Sparkles, MoreHorizontal, Share2, Video, MessageCircle, Trash2, Package, Music2, Phone } from 'lucide-react';
+import { CalendarDays, Camera, ChartNoAxesCombined, CircleDollarSign, Clock3, Image, LayoutDashboard, ListChecks, Menu, Plus, Search, Settings2, Users, X, ArrowUpRight, ChevronLeft, ChevronRight, Check, Banknote, Sparkles, MoreHorizontal, Share2, Video, MessageCircle, Trash2, Package, Music2, Phone, ClipboardList, Calculator } from 'lucide-react';
 import type { Session } from '@supabase/supabase-js';
 import { supabase } from './supabase';
 import LeadsPage from './LeadsPage';

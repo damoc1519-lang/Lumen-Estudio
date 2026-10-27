@@ -1,0 +1,1 @@
+create index event_staff_assignments_workspace_idx on public.event_staff_assignments(workspace_id);

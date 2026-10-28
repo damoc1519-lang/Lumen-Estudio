@@ -1,0 +1,2 @@
+create index quote_package_components_package_workspace_idx
+ on public.quote_package_components(package_id,workspace_id);
